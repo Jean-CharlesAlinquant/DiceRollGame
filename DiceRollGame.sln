@@ -7,6 +7,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{5ED79F51-78A
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiceRollGame", "src\DiceRollGame\DiceRollGame.csproj", "{ED4D20A1-86FE-4647-9938-1769D587537D}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{E5E79DAA-BA11-4CDB-BE25-FDDBB188DF31}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiceRollGame.Tests", "tests\DiceRollGame.Tests\DiceRollGame.Tests.csproj", "{AC50AB65-B1F1-46B2-A9BF-79BEF1DC5274}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,6 +21,10 @@ Global
 		{ED4D20A1-86FE-4647-9938-1769D587537D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ED4D20A1-86FE-4647-9938-1769D587537D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ED4D20A1-86FE-4647-9938-1769D587537D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC50AB65-B1F1-46B2-A9BF-79BEF1DC5274}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC50AB65-B1F1-46B2-A9BF-79BEF1DC5274}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC50AB65-B1F1-46B2-A9BF-79BEF1DC5274}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC50AB65-B1F1-46B2-A9BF-79BEF1DC5274}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -26,5 +34,6 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{ED4D20A1-86FE-4647-9938-1769D587537D} = {5ED79F51-78AA-486D-8323-24206932F6BD}
+		{AC50AB65-B1F1-46B2-A9BF-79BEF1DC5274} = {E5E79DAA-BA11-4CDB-BE25-FDDBB188DF31}
 	EndGlobalSection
 EndGlobal

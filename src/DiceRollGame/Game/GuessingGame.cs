@@ -23,7 +23,7 @@ namespace DiceRollGame.Game
             var triesLeft = InitialTries;
             while (triesLeft > 0)
             {
-                var guess = _userCommunication.ReadInteger("Enter number:");
+                var guess = _userCommunication.ReadInteger("Enter a number:");
                 if (guess == diceRollResult)
                 {
                     return GameResult.Victory;
