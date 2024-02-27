@@ -1,6 +1,6 @@
 namespace DiceRollGame.Game
 {
-    public class Dice
+    public class Dice : IDice
     {
         private readonly Random _random;
         private const int sides = 6;

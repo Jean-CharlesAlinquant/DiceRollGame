@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.002.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DiceRollGame", "DiceRollGame.csproj", "{D6C5C720-BDF9-4FD5-994B-E14A255F0E94}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{5ED79F51-78AA-486D-8323-24206932F6BD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiceRollGame", "src\DiceRollGame\DiceRollGame.csproj", "{ED4D20A1-86FE-4647-9938-1769D587537D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +13,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D6C5C720-BDF9-4FD5-994B-E14A255F0E94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D6C5C720-BDF9-4FD5-994B-E14A255F0E94}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D6C5C720-BDF9-4FD5-994B-E14A255F0E94}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D6C5C720-BDF9-4FD5-994B-E14A255F0E94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED4D20A1-86FE-4647-9938-1769D587537D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED4D20A1-86FE-4647-9938-1769D587537D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED4D20A1-86FE-4647-9938-1769D587537D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED4D20A1-86FE-4647-9938-1769D587537D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {82BAB261-570F-4472-BBCC-EBDA462B2188}
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{ED4D20A1-86FE-4647-9938-1769D587537D} = {5ED79F51-78AA-486D-8323-24206932F6BD}
 	EndGlobalSection
 EndGlobal
