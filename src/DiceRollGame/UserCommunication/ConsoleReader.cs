@@ -1,15 +1,14 @@
-namespace DiceRollGame.UserCommunication
+namespace DiceRollGame.UserCommunication;
+
+public static class ConsoleReader
 {
-    public static class ConsoleReader
+    public static int ReadInteger(string message)
     {
-        public static int ReadInteger(string message)
+        int result;
+        do
         {
-            int result;
-            do
-            {
-                Console.WriteLine(message);
-            } while(!int.TryParse(Console.ReadLine(), out result));
-            return result;
-        }
+            Console.WriteLine(message);
+        } while(!int.TryParse(Console.ReadLine(), out result));
+        return result;
     }
 }

@@ -1,15 +1,14 @@
-namespace DiceRollGame.Game
+namespace DiceRollGame.Game;
+
+public class Dice : IDice
 {
-    public class Dice : IDice
+    private readonly Random _random;
+    private const int sides = 6;
+
+    public Dice(Random random)
     {
-        private readonly Random _random;
-        private const int sides = 6;
-
-        public Dice(Random random)
-        {
-            _random = random;
-        }
-
-        public int Roll() => _random.Next(1, sides + 1);
+        _random = random;
     }
+
+    public int Roll() => _random.Next(1, sides + 1);
 }

@@ -1,8 +1,7 @@
-namespace DiceRollGame.Game
+namespace DiceRollGame.Game;
+
+public enum GameResult
 {
-    public enum GameResult
-    {
-        Victory,
-        Loss
-    }
+    Victory,
+    Loss
 }

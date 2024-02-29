@@ -1,8 +1,7 @@
-namespace DiceRollGame.UserCommunication
+namespace DiceRollGame.UserCommunication;
+
+public interface IUserCommunication
 {
-    public interface IUserCommunication
-    {
-        int ReadInteger(string prompt);
-        void ShowMessage(string message);
-    }
+    int ReadInteger(string prompt);
+    void ShowMessage(string message);
 }

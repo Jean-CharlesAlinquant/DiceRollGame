@@ -1,46 +1,45 @@
 using DiceRollGame.UserCommunication;
 
-namespace DiceRollGame.Game
+namespace DiceRollGame.Game;
+
+public class GuessingGame
 {
-    public class GuessingGame
+    private readonly IDice _dice;
+    private readonly IUserCommunication _userCommunication;
+    private const int InitialTries = 3;
+
+    public GuessingGame(IDice dice, IUserCommunication userCommunication)
     {
-        private readonly IDice _dice;
-        private readonly IUserCommunication _userCommunication;
-        private const int InitialTries = 3;
+        _dice = dice;
+        _userCommunication = userCommunication;
+    }
 
-        public GuessingGame(IDice dice, IUserCommunication userCommunication)
+    public GameResult Play()
+    {
+        var diceRollResult = _dice.Roll();
+        _userCommunication.ShowMessage(
+            $"Dice rolled. Guess what number it shows in {InitialTries} tries.");
+
+        var triesLeft = InitialTries;
+        while (triesLeft > 0)
         {
-            _dice = dice;
-            _userCommunication = userCommunication;
-        }
-
-        public GameResult Play()
-        {
-            var diceRollResult = _dice.Roll();
-            _userCommunication.ShowMessage(
-                $"Dice rolled. Guess what number it shows in {InitialTries} tries.");
-
-            var triesLeft = InitialTries;
-            while (triesLeft > 0)
+            var guess = _userCommunication.ReadInteger("Enter a number:");
+            if (guess == diceRollResult)
             {
-                var guess = _userCommunication.ReadInteger("Enter a number:");
-                if (guess == diceRollResult)
-                {
-                    return GameResult.Victory;
-                }
-                _userCommunication.ShowMessage("Wrong guess. Try again.");
-                triesLeft--;
+                return GameResult.Victory;
             }
-            return GameResult.Loss;
+            _userCommunication.ShowMessage("Wrong guess. Try again.");
+            triesLeft--;
         }
+        return GameResult.Loss;
+    }
 
-        public void PrintResult(GameResult gameResult)
-        {
-            string message = gameResult == GameResult.Victory
-                ? "You win!"
-                : "You lose :(";
+    public void PrintResult(GameResult gameResult)
+    {
+        string message = gameResult == GameResult.Victory
+            ? "You win!"
+            : "You lose :(";
 
-            _userCommunication.ShowMessage(message);
-        }
+        _userCommunication.ShowMessage(message);
     }
 }

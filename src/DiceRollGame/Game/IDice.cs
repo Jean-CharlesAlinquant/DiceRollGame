@@ -1,7 +1,6 @@
-namespace DiceRollGame.Game
+namespace DiceRollGame.Game;
+
+public interface IDice
 {
-    public interface IDice
-    {
-        int Roll();
-    }
+    int Roll();
 }
